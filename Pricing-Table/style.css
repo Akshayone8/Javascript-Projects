@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #F6F7FC;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    
+}
+
+.section1 span{
+    display: none;
+}
+
+.section2{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.section2 h1{
+    letter-spacing: 1.8px;
+}
+.card{
+    background-color: #fff;
+    flex-grow: 1;
+    border-radius: 10px;
+    box-shadow: 0px 50px 200px 0px rgba(0,0,0,0.2);
+    padding: 10px;
+    
+}
+.card:nth-child(2){
+    transform: scale(1.2);
+    background-image: linear-gradient(to right,hsl(236,72%,79%),hsl(237,63%,64%));
+}
+
+.btn{
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    /* background-color: hsl(234); */
+    background-image: linear-gradient(to right,hsl(236,72%,79%),hsl(237,63%,64%));
+    color: #fff;
+    font-family: "Poppins";
+    letter-spacing: 1.5px;
+}
+
+.card2 .btn{
+    background-image: none;
+    color: #000;
+}
+
+.section1 span.showPlan{
+    display: inline-block;
+    animation: textIn 0.5s ease;
+    transition: all 0.2s ease;
+}
+
+@keyframes textIn {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+
+@media screen and (max-width:426px){
+    .container{
+        height: 100%;
+    }
+    .section2{
+        flex-direction: column;
+        
+    }
+    .card{
+        margin-top: 25px;
+    }
+    .section2 .card2{
+        transform: scale(1);
+    }
+}
